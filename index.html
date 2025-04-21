@@ -1,99 +1,132 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Loja de Perfumes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Barra de pesquisa -->
-    <header>
-        <div class="search-container">
-            <input type="text" placeholder="Pesquisar produtos..." id="search">
-        </div>
-    </header>
+body {
+    font-family: 'Anton', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
 
-    <!-- Categorias -->
-    <section class="categories">
-        <h2>Categorias</h2>
-        <div class="category-list">
-            <a href="#iphone" class="category-item">iPhone</a>
-            <a href="#applewatch" class="category-item">Apple Watch</a>
-            <a href="#ipad" class="category-item">iPad</a>
-        </div>
-    </section>
+header {
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+}
 
-    <!-- Produtos Mais Vendidos -->
-    <section class="featured-products">
-        <h2>Mais Vendidos</h2>
-        <div class="products">
-            <!-- Produto 1 -->
-            <div class="product">
-                <img src="https://lojadior.vtexassets.com/arquivos/ids/196323-1200-800/3348901321129_02-highlight-sauvage-edt.jpg?v=638786829193270000" alt="Sauvage Eau de Toilette">
-                <h3>Sauvage</h3>
-                <p class="price">R$ 1225,00</p>
-                <div class="product-actions">
-                    <button class="btn add-to-cart">Adicionar ao Carrinho</button>
-                    <button class="btn view-more">Ver Mais</button>
-                </div>
-            </div>
-            <!-- Produto 2 -->
-            <div class="product">
-                <img src="https://lojadior.vtexassets.com/arquivos/ids/199119-1200-800/3348901571432_02-highlight-md.jpg.jpg?v=638799914764700000" alt="Miss Dior">
-                <h3>Miss Dior</h3>
-                <p class="price">R$ 1039,00</p>
-                <div class="product-actions">
-                    <button class="btn add-to-cart">Adicionar ao Carrinho</button>
-                    <button class="btn view-more">Ver Mais</button>
-                </div>
-            </div>
-            <!-- Produto 3 -->
-            <div class="product">
-                <img src="https://lojadior.vtexassets.com/arquivos/ids/198944-1200-800/3348901738224_02-highlight-jadore.jpg?v=638799843681300000" alt="Produto 3">
-                <h3>J'adore</h3>
-                <p class="price">R$ 1039,00</p>
-                <div class="product-actions">
-                    <button class="btn add-to-cart">Adicionar ao Carrinho</button>
-                    <button class="btn view-more">Ver Mais</button>
-                </div>
-            </div>
-            <!-- Produto 4 -->
-            <div class="product">
-                <img src="https://lojadior.vtexassets.com/arquivos/ids/199040-1200-800/3348901627351_02-highlight-miss-dior-blooming-bouquet.jpg.jpg?v=638799902991100000" alt="Produto 4">
-                <h3>Miss Dior Blooming Bouquet</h3>
-                <p class="price">R$ 915,00</p>
-                <div class="product-actions">
-                    <button class="btn add-to-cart">Adicionar ao Carrinho</button>
-                    <button class="btn view-more">Ver Mais</button>
-                </div>
-            </div>
-            <!-- Produto 5 -->
-            <div class="product">
-                <img src="https://lojadior.vtexassets.com/arquivos/ids/196979-1200-800/3348900838185_02-highlight-dh-intense.jpg?v=638651144347930000" alt="Produto 5">
-                <h3>Dior Homme Intense</h3>
-                <p class="price">R$ 975,00</p>
-                <div class="product-actions">
-                    <button class="btn add-to-cart">Adicionar ao Carrinho</button>
-                    <button class="btn view-more">Ver Mais</button>
-                </div>
-            </div>
-        </div>
-    </section>
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    <!-- Rodapé -->
-    <footer>
-        <div class="footer-content">
-            <div class="social-media">
-                <a href="https://instagram.com" class="social-icon">Instagram</a>
-                <a href="https://tiktok.com" class="social-icon">TikTok</a>
-            </div>
-            <div class="contact">
-                <p>Contato: thaemillyoliveira@acad.ifma.edu.br</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+.search-container input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 30px; /* Tornando a barra de pesquisa arredondada */
+}
+
+.cart-container .cart-button {
+    background-color: #d590e8;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-container .cart-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.cart-container .cart-button:hover {
+    background-color: #bf7ac9;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.featured-products {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 16px;
+    color: #d590e8;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #d590e8;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #bf7ac9;
+}
+
+footer {
+    background-color: #d590e8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+footer .contact {
+    margin-top: 20px;
+}
